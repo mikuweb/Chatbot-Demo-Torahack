@@ -1,7 +1,8 @@
 import { Divider } from "@material-ui/core";
 import { useState } from "react";
-import defaultDataset from "./dataset";
+import defaultDataset from "./dataset.js";
 import "./assets/styles/style.css";
+import { AnswersList } from "./components/index";
 
 const App = () => {
   const [answers, setAnswers] = useState([]); // 回答componentに表示するデータ
@@ -12,7 +13,11 @@ const App = () => {
 
   return (
     <div>
-      <section className="c-section">チャット</section>
+      <section className="c-section">
+        <div className="c-box">
+          <AnswersList />
+        </div>
+      </section>
     </div>
   );
 };
